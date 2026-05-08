@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F7F8FA"/>
+  <style>
+    .font{font-family:"Microsoft JhengHei","Noto Sans TC",Arial,sans-serif}
+    .muted{fill:#5B6475}.ink{fill:#172033}.accent{fill:#2F6F73}.warm{fill:#C56A2C}
+  </style>
+  <text x="84" y="91" class="font accent" font-size="28" font-weight="700">研究核心</text>
+  <text x="84" y="164" class="font ink" font-size="51" font-weight="700">流行語為什麼會紅？又為什麼會退燒、變成死語？</text>
+  <text x="86" y="255" class="font muted" font-size="27">流行語的生命週期不只和詞語本身有關，也和來源、語境、二創能力、社群規範與社會環境有關。</text>
+  <line x1="84" y1="298" x2="1518" y2="298" stroke="#D8DEE8" stroke-width="2"/>
+
+  <text x="86" y="375" class="font warm" font-size="24" font-weight="700">主題</text>
+  <text x="86" y="438" class="font ink" font-size="31">本報告不是做流行語字典，而是看流行語如何經歷：</text>
+  <rect x="86" y="463" width="128" height="86" rx="12" fill="#E7F2F1" stroke="#BFD9D7" stroke-width="2"/>
+      <text x="150" y="505" class="font" text-anchor="middle" font-size="28" font-weight="700" fill="#2F6F73">上升</text>
+      <text x="150" y="532" class="font muted" text-anchor="middle" font-size="16">被看見</text><text x="216" y="505" class="font muted" font-size="34">→</text><rect x="241" y="463" width="128" height="86" rx="12" fill="#E7F2F1" stroke="#BFD9D7" stroke-width="2"/>
+      <text x="305" y="505" class="font" text-anchor="middle" font-size="28" font-weight="700" fill="#2F6F73">成熟</text>
+      <text x="305" y="532" class="font muted" text-anchor="middle" font-size="16">被共用</text><text x="371" y="505" class="font muted" font-size="34">→</text><rect x="396" y="463" width="128" height="86" rx="12" fill="#F7EFEA" stroke="#E5CFC2" stroke-width="2"/>
+      <text x="460" y="505" class="font" text-anchor="middle" font-size="28" font-weight="700" fill="#C56A2C">衰退</text>
+      <text x="460" y="532" class="font muted" text-anchor="middle" font-size="16">被說過氣</text><text x="526" y="505" class="font muted" font-size="34">→</text><rect x="551" y="463" width="128" height="86" rx="12" fill="#F7EFEA" stroke="#E5CFC2" stroke-width="2"/>
+      <text x="615" y="505" class="font" text-anchor="middle" font-size="28" font-weight="700" fill="#C56A2C">死語化</text>
+      <text x="615" y="532" class="font muted" text-anchor="middle" font-size="16">需要解釋</text>
+  <text x="86" y="635" class="font warm" font-size="24" font-weight="700">核心觀點</text>
+  <text x="86" y="705" class="font ink" font-size="36" font-weight="700">流行語的生命週期，是來源、語境與社群</text>
+  <text x="86" y="748" class="font ink" font-size="36" font-weight="700">共同推動的變化過程。</text>
+
+  <text x="846" y="375" class="font warm" font-size="24" font-weight="700">本報告模型</text>
+  <rect x="845" y="390" width="654" height="343" fill="#FFFFFF" stroke="#D8DEE8" stroke-width="2"/>
+  <rect x="845" y="390" width="654" height="53" fill="#EDF2F7" stroke="#D8DEE8"/>
+  <line x1="1064" y1="390" x2="1064" y2="733" stroke="#D8DEE8" stroke-width="2"/>
+  <line x1="845" y1="390" x2="1499" y2="390" stroke="#D8DEE8"/>
+      <text x="871" y="424" class="font muted" font-size="22" font-weight="700">關鍵因素</text>
+      <text x="1088" y="424" class="font muted" font-size="22" font-weight="700">作用</text><line x1="845" y1="443" x2="1499" y2="443" stroke="#D8DEE8"/>
+      <text x="871" y="486" class="font ink" font-size="28" font-weight="700">來源</text>
+      <text x="1088" y="486" class="font ink" font-size="28" font-weight="400">決定爆紅起點</text><line x1="845" y1="510" x2="1499" y2="510" stroke="#D8DEE8"/>
+      <text x="871" y="553" class="font ink" font-size="28" font-weight="400">語境依賴</text>
+      <text x="1088" y="553" class="font ink" font-size="28" font-weight="400">決定是否容易過時</text><line x1="845" y1="577" x2="1499" y2="577" stroke="#D8DEE8"/>
+      <text x="871" y="620" class="font ink" font-size="28" font-weight="400">二創能力</text>
+      <text x="1088" y="620" class="font ink" font-size="28" font-weight="400">決定是否進入成熟期</text><line x1="845" y1="644" x2="1499" y2="644" stroke="#D8DEE8"/>
+      <text x="871" y="687" class="font ink" font-size="28" font-weight="400">社群與環境</text>
+      <text x="1088" y="687" class="font ink" font-size="28" font-weight="400">決定是否被接續使用</text>
+  <line x1="84" y1="786" x2="1518" y2="786" stroke="#D8DEE8" stroke-width="2"/>
+  <text x="86" y="830" class="font muted" font-size="22">口頭補充：本報告不是做流行語字典，而是看流行語如何經歷「上升、成熟、衰退、死語化」。</text>
+</svg>
