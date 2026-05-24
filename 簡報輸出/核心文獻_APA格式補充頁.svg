@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F7F8FA"/>
+  <style>
+    .font{font-family:"Microsoft JhengHei","Noto Sans TC",Arial,sans-serif}
+    .ink{fill:#172033}.muted{fill:#5B6475}.accent{fill:#2F6F73}.warm{fill:#C56A2C}
+  </style>
+  <text x="84" y="82" class="font accent" font-size="27" font-weight="700">核心文獻</text>
+  <text x="84" y="150" class="font ink" font-size="50" font-weight="700">核心文獻與 APA 格式</text>
+  <text x="86" y="210" class="font muted" font-size="24">上方保留原本的參考用途；下方補上可放在簡報最後的 APA 格式。</text>
+  <line x1="84" y1="234" x2="1518" y2="234" stroke="#D8DEE8" stroke-width="2"/>
+  <text x="86" y="286" class="font warm" font-size="24" font-weight="700">文獻用途</text>
+  <rect x="86" y="307" width="1386" height="194" fill="#fff" stroke="#D8DEE8" stroke-width="2"/><rect x="86" y="307" width="1386" height="38" fill="#EDF2F7" stroke="#D8DEE8"/><text x="106" y="334" class="font muted" font-size="18" font-weight="700">文獻</text><line x1="686" y1="307" x2="686" y2="501" stroke="#D8DEE8"/><text x="706" y="334" class="font muted" font-size="18" font-weight="700">本文參考用途</text><rect x="86" y="345" width="1386" height="52" fill="#fff" stroke="#D8DEE8"/><text x="106" y="377" class="font ink" font-size="20" font-weight="700">《華語流行語的使用分析與教學建議》</text><line x1="686" y1="307" x2="686" y2="501" stroke="#D8DEE8"/><text x="706" y="377" class="font ink" font-size="20" font-weight="400">流行語來源、結構、語意、語用分類</text><rect x="86" y="397" width="1386" height="52" fill="#fff" stroke="#D8DEE8"/><text x="106" y="429" class="font ink" font-size="20" font-weight="700">User Lifecycle and Linguistic Change in Online Communities</text><line x1="686" y1="307" x2="686" y2="501" stroke="#D8DEE8"/><text x="706" y="429" class="font ink" font-size="20" font-weight="400">線上社群語言規範與使用者生命週期</text><rect x="86" y="449" width="1386" height="52" fill="#fff" stroke="#D8DEE8"/><text x="106" y="481" class="font ink" font-size="20" font-weight="700">Labov, Principles of Linguistic Change: Social Factors</text><line x1="686" y1="307" x2="686" y2="501" stroke="#D8DEE8"/><text x="706" y="481" class="font ink" font-size="20" font-weight="400">社會因素、世代、身份認同對語言變化的影響</text>
+  <text x="86" y="535" class="font warm" font-size="24" font-weight="700">APA 格式參考文獻</text>
+  <text x="94" y="555" class="font accent" font-size="20" font-weight="700">1.</text>
+    <text x="126" y="555" class="font ink" font-size="19">吳思平（2019）。華語流行語的使用分析與教學建議：以卡提諾狂新聞為語料範圍〔碩士論文，國立政治大學〕。</text><text x="126" y="580" class="font ink" font-size="19">政大學術集成。http://nccur.lib.nccu.edu.tw/handle/140.119/125631</text><text x="94" y="625" class="font accent" font-size="20" font-weight="700">2.</text>
+    <text x="126" y="625" class="font ink" font-size="19">Danescu-Niculescu-Mizil, C., West, R., Jurafsky, D., Leskovec, J., &amp; Potts, C. (2013).</text><text x="126" y="650" class="font ink" font-size="19">No country for old members: User lifecycle and linguistic change in online communities.</text><text x="126" y="675" class="font ink" font-size="19">In Proceedings of the 22nd International Conference on World Wide Web (pp. 307–318). ACM.</text><text x="126" y="700" class="font ink" font-size="19">https://doi.org/10.1145/2488388.2488416</text><text x="94" y="755" class="font accent" font-size="20" font-weight="700">3.</text>
+    <text x="126" y="755" class="font ink" font-size="19">Labov, W. (2001). Principles of linguistic change: Social factors (Vol. 2). Blackwell Publishers.</text>
+  <line x1="84" y1="834" x2="1518" y2="834" stroke="#D8DEE8" stroke-width="2"/>
+  <text x="86" y="870" class="font muted" font-size="18">註：此頁可直接接在原簡報「核心文獻」頁後，或取代原本的文獻頁。</text>
+</svg>
