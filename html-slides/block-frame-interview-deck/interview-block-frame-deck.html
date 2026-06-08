@@ -13,6 +13,13 @@ const data=JSON.parse(document.getElementById('data').textContent);if(!data.inte
 .careerGrid .head{background:var(--pink);font-weight:900}
 .careerGrid .stage{background:var(--cream);font-weight:900}
 .careerNote{margin:12px 0 0;font-size:15px;line-height:1.75;font-weight:800}
+.homePanel{border:var(--line);background:#fff;box-shadow:var(--shadow);padding:24px;margin-bottom:24px}
+.homePanel h2{font-size:30px;line-height:1.25;margin:0 0 12px;font-weight:900}
+.homeLead{font-size:18px;line-height:1.85;font-weight:750;margin:0 0 18px}
+.homeMarkdown{border:3px solid var(--ink);background:#f4fff0;box-shadow:var(--soft);padding:18px;white-space:pre-wrap;font-size:16px;line-height:1.7;font-weight:700;margin:14px 0 0}
+.homeActions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.homeAction{border:3px solid var(--ink);background:var(--yellow);box-shadow:var(--soft);padding:11px 14px;font-weight:900;cursor:pointer}
+.homeAction.secondary{background:var(--cyan)}
 @media(max-width:920px){.careerGrid{grid-template-columns:1fr}.careerGrid div{font-size:13px}.careerFrameTitle{align-items:flex-start;flex-direction:column}.careerFrameTitle span:last-child{display:inline-block}}
 </style><script>
 document.title='從會計到 AI：職涯探索與學習規畫';
@@ -51,6 +58,23 @@ renderHero=function(){
   frame.className='careerFrame';
   frame.innerHTML='<div class="careerFrameTitle"><span>首頁架構：把訪談變成職涯探索行動</span><span>學習規畫 = mentor 觀點 + 通識底層 + 原型驗證</span></div><div class="careerGrid"><div class="head">階段</div><div class="head">我找誰 / 做什麼</div><div class="head">對學習規畫的意義</div><div class="head">對職涯探索的驗證</div>'+rows.map(r=>'<div class="stage">'+esc(r[0])+'</div><div>'+esc(r[1])+'</div><div>'+esc(r[2])+'</div><div>'+esc(r[3])+'</div>').join('')+'</div><p class="careerNote">所以教授訪談不是硬湊進來：表哥回答「往哪裡走、怎麼看趨勢」，教授回答「要用什麼底層認知理解世界」，小作品則回答「我有沒有真的把想法做成可驗證的行動」。</p>';
   hero.appendChild(frame);
+};
+let landingMode=true;
+const originalCareerPageButton=pageButton;
+pageButton=function(p){
+  const b=originalCareerPageButton(p);
+  b.onclick=()=>{landingMode=false;current=p.num;currentByInterview[activeInterview]=current;render()};
+  return b;
+};
+const originalCareerRenderContent=renderContent;
+function renderLandingContent(){
+  content.innerHTML='<section class="homePanel"><h2>首頁：這不是訪談第一頁，而是我的職涯探索地圖</h2><p class="homeLead">這份簡報的進入點改成「問題、mentor、學習規畫、行動驗證」。訪談內容放在後面作為證據；首頁先說明我如何把表哥的職涯趨勢判斷、教授的通識學習提醒，以及 Progress Report 裡的小作品實作，整理成一條可以被檢查的探索路線。</p><div class="homeMarkdown">### Progress Report 行動驗證摘錄\\n\\n- **追蹤期間**：Week 4 到 Week 13，記錄股票遊戲化工具、AI medical companion、租屋資料工具、disaster-response MVP 等多個小作品。\\n- **核心 motto**：不是因為事情簡單才做，而是把事情重新設計成比較容易開始。\\n- **完美主義修正**：先接受不完美 prototype，讓作品從「腦中完美版本」變成可以運作、可以修改的版本。\\n- **AI 協作方式**：AI 不是替我思考，而是把龐大的焦慮拆成今天能處理的小步驟。\\n- **作品展示意識**：作品不只要能跑，還要能被理解、被展示、被相信。\\n- **自我理解**：這些專案真正讓我看見的是，我如何在焦慮、拖延、完美主義與創作熱情之間工作。</div><p class="careerNote">因此，Progress Report 在這份職涯探索裡不是另一份無關作業，而是第三個證據：我不只聽 mentor 建議，也真的用小作品測試自己能否用 AI、原型與反思紀錄往跨領域方向前進。</p><div class="homeActions"><button class="homeAction" id="startCousin">進入表哥 mentor 訪談</button><button class="homeAction secondary" id="startProfessor">進入教授通識訪談</button></div></section>';
+  document.getElementById('startCousin').onclick=()=>{landingMode=false;activeInterview='cousin';current=currentByInterview[activeInterview]||1;render()};
+  document.getElementById('startProfessor').onclick=()=>{landingMode=false;activeInterview='professor';current=currentByInterview[activeInterview]||1;renderQuoteFilters();render()};
+}
+renderContent=function(){
+  if(landingMode)return renderLandingContent();
+  return originalCareerRenderContent();
 };
 render();
 </script></body></html>
