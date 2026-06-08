@@ -20,12 +20,26 @@ const data=JSON.parse(document.getElementById('data').textContent);if(!data.inte
 .homeActions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 .homeAction{border:3px solid var(--ink);background:var(--yellow);box-shadow:var(--soft);padding:11px 14px;font-weight:900;cursor:pointer}
 .homeAction.secondary{background:var(--cyan)}
+.topSearchTools{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-left:auto}
+.topSearchTools .label{margin:0}
+.topSearchTools .modeToggle,.topSearchTools .chips{display:flex;align-items:center;gap:8px;margin:0}
+.topSearchTools .modeBtn,.topSearchTools .chip{padding:8px 10px;white-space:nowrap}
+.topSearchTools .chips.hidden{display:none}
 @media(max-width:920px){.careerGrid{grid-template-columns:1fr}.careerGrid div{font-size:13px}.careerFrameTitle{align-items:flex-start;flex-direction:column}.careerFrameTitle span:last-child{display:inline-block}}
 </style><script>
 document.title='從會計到 AI：職涯探索與學習規畫';
 document.querySelector('.brand').textContent='CAREER MAP';
 document.querySelector('.title').textContent='職涯探索與學習規畫互動簡報';
 search.placeholder='搜尋：mentor、通識、完美主義、AI、職涯...';
+const topSearchTools=document.createElement('div');
+topSearchTools.className='topSearchTools';
+const searchLabel=document.createElement('div');
+searchLabel.className='label';
+searchLabel.textContent='檢索方式';
+const sideSearchLabel=modeNav.parentElement.previousElementSibling;
+if(sideSearchLabel&&sideSearchLabel.classList.contains('label'))sideSearchLabel.remove();
+topSearchTools.append(searchLabel,modeNav.parentElement,document.querySelector('.chips'));
+search.parentElement.insertBefore(topSearchTools,search);
 const cousinFrame=data.interviews.find(x=>x.id==='cousin');
 if(cousinFrame){
   cousinFrame.navLabel='表哥 mentor';
@@ -75,6 +89,37 @@ function renderLandingContent(){
 renderContent=function(){
   if(landingMode)return renderLandingContent();
   return originalCareerRenderContent();
+};
+renderNav=function(){
+  nav.innerHTML='';
+  let any=false;
+  const q=search.value.trim();
+  groupedPages().forEach((g,idx)=>{
+    const visible=g.pages.filter(pass);
+    if(!visible.length)return;
+    any=true;
+    const id=`${activeInterview}-${idx}-${g.title}`;
+    const open=Boolean(q)||openChapters.has(id);
+    const wrap=document.createElement('div');
+    wrap.className='chapterGroup'+(open?'':' closed');
+    const btn=document.createElement('button');
+    btn.className='chapterBtn';
+    btn.innerHTML=`<span>${esc(g.title)}<small>${String(visible[0].num).padStart(2,'0')} - ${String(visible[visible.length-1].num).padStart(2,'0')} / ${visible.length} 頁</small></span><span>${open?'−':'+'}</span>`;
+    btn.onclick=()=>{if(openChapters.has(id))openChapters.delete(id);else openChapters.add(id);renderNav()};
+    const list=document.createElement('div');
+    list.className='chapterPages';
+    visible.forEach(p=>list.appendChild(pageButton(p)));
+    wrap.appendChild(btn);
+    wrap.appendChild(list);
+    nav.appendChild(wrap);
+  });
+  if(!any)nav.innerHTML='<div class="empty">沒有符合條件的頁面</div>';
+};
+const originalCareerRenderMode=renderMode;
+renderMode=function(){
+  originalCareerRenderMode();
+  const topChips=topSearchTools.querySelector('.chips');
+  if(topChips)topChips.classList.toggle('hidden',sideMode!=='nav');
 };
 render();
 </script></body></html>
