@@ -16,7 +16,14 @@ const data=JSON.parse(document.getElementById('data').textContent);if(!data.inte
 .homePanel{border:var(--line);background:#fff;box-shadow:var(--shadow);padding:24px;margin-bottom:24px}
 .homePanel h2{font-size:30px;line-height:1.25;margin:0 0 12px;font-weight:900}
 .homeLead{font-size:18px;line-height:1.85;font-weight:750;margin:0 0 18px}
-.homeMarkdown{border:3px solid var(--ink);background:#f4fff0;box-shadow:var(--soft);padding:18px;white-space:pre-wrap;font-size:16px;line-height:1.7;font-weight:700;margin:14px 0 0}
+.homeMarkdown{border:3px solid var(--ink);background:#f4fff0;box-shadow:var(--soft);padding:18px;font-size:16px;line-height:1.7;font-weight:700;margin:14px 0 0}
+.homeMarkdown h3{font-size:24px;line-height:1.25;margin:0 0 10px;font-weight:900}
+.homeMarkdown h4{display:inline-block;border:3px solid var(--ink);background:var(--cream);box-shadow:var(--soft);padding:6px 9px;font-size:16px;margin:16px 0 8px;font-weight:900}
+.homeMarkdown p{margin:8px 0}
+.homeMarkdown ul{margin:8px 0 4px;padding-left:24px}
+.homeMarkdown li{margin:7px 0}
+.homeMarkdown blockquote{border-left:8px solid var(--ink);background:#fff;padding:10px 14px;margin:10px 0;font-weight:900}
+.homeMarkdown strong{background:var(--yellow);padding:1px 4px}
 .homeActions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 .homeAction{border:3px solid var(--ink);background:var(--yellow);box-shadow:var(--soft);padding:11px 14px;font-weight:900;cursor:pointer}
 .homeAction.secondary{background:var(--cyan)}
@@ -82,7 +89,7 @@ pageButton=function(p){
 };
 const originalCareerRenderContent=renderContent;
 function renderLandingContent(){
-  content.innerHTML='<section class="homePanel"><h2>首頁：這不是訪談第一頁，而是我的職涯探索地圖</h2><p class="homeLead">這份簡報的進入點改成「問題、mentor、學習規畫、行動驗證」。訪談內容放在後面作為證據；首頁先說明我如何把表哥的職涯趨勢判斷、教授的通識學習提醒，以及 Progress Report 裡的小作品實作，整理成一條可以被檢查的探索路線。</p><div class="homeMarkdown">### Progress Report 行動驗證摘錄\\n\\n- **追蹤期間**：Week 4 到 Week 13，記錄股票遊戲化工具、AI medical companion、租屋資料工具、disaster-response MVP 等多個小作品。\\n- **核心 motto**：不是因為事情簡單才做，而是把事情重新設計成比較容易開始。\\n- **完美主義修正**：先接受不完美 prototype，讓作品從「腦中完美版本」變成可以運作、可以修改的版本。\\n- **AI 協作方式**：AI 不是替我思考，而是把龐大的焦慮拆成今天能處理的小步驟。\\n- **作品展示意識**：作品不只要能跑，還要能被理解、被展示、被相信。\\n- **自我理解**：這些專案真正讓我看見的是，我如何在焦慮、拖延、完美主義與創作熱情之間工作。</div><p class="careerNote">因此，Progress Report 在這份職涯探索裡不是另一份無關作業，而是第三個證據：我不只聽 mentor 建議，也真的用小作品測試自己能否用 AI、原型與反思紀錄往跨領域方向前進。</p><div class="homeActions"><button class="homeAction" id="startCousin">進入表哥 mentor 訪談</button><button class="homeAction secondary" id="startProfessor">進入教授通識訪談</button></div></section>';
+  content.innerHTML='<section class="homePanel"><h2>首頁：這不是訪談第一頁，而是我的職涯探索地圖</h2><p class="homeLead">這份簡報的進入點改成「問題、mentor、學習規畫、行動驗證」。訪談內容放在後面作為證據；首頁先說明我如何把表哥的職涯趨勢判斷、教授的通識學習提醒，以及 Progress Report 裡的小作品實作，整理成一條可以被檢查的探索路線。</p><div class="homeMarkdown"><h3>Progress Report 行動驗證摘錄</h3><blockquote>核心問題：我不是只想知道未來要做什麼，而是想驗證自己能不能用比較健康、可持續的方式開始做事。</blockquote><h4>1. 行動範圍</h4><ul><li><strong>追蹤期間：</strong>Week 4 到 Week 13。</li><li><strong>作品類型：</strong>股票遊戲化工具、課堂遊戲、AI medical companion、租屋資料工具、disaster-response MVP。</li><li><strong>共同特徵：</strong>這些不是單純作業，而是我把興趣、AI 工具、資料、介面與實際問題放在一起測試的小作品。</li></ul><h4>2. Motto 如何變成行動</h4><ul><li><strong>把入口變小：</strong>面對股市分析與滑雪遊戲這種很大的想法，我先做能跑的簡陋原型，而不是等腦中的完美版本成形。</li><li><strong>先模仿、先照做：</strong>遇到陌生領域時，我不再要求自己第一步就完全原創，而是先借助教學、範例與 AI 協作讓自己動起來。</li><li><strong>用 deadline 當檢查點：</strong>先做出骨架與 MVP，讓期限不再是最後一天的審判，而是一次一次修正作品的節點。</li></ul><h4>3. 我從實作中驗證到的能力</h4><ul><li><strong>AI 協作：</strong>AI 不是替我思考，而是把龐大的焦慮拆成今天能處理的小步驟。</li><li><strong>作品溝通：</strong>作品不只要能跑，還要能被理解、被展示、被相信，所以文件、展示帳號、導覽影片也變成作品的一部分。</li><li><strong>團隊合作：</strong>租屋資料工具讓我發現 AI 可以讓我更獨立，但真人合作、說服、整合意見仍然是無法跳過的能力。</li><li><strong>SOP 建立：</strong>到災害應變系統時，我開始先釐清資料格式與基本規格，而不是急著刻畫面，這表示我逐漸有了面對未知任務的方法。</li></ul><h4>4. 對職涯探索的意義</h4><ul><li><strong>脫離完美主義：</strong>我學到的不是「作品要完美」，而是「先讓作品存在，才有修正與被驗證的可能」。</li><li><strong>理解自己的工作方式：</strong>這些專案讓我看見自己會焦慮、會拖延、會想逃進寫程式，但也能透過紀錄與小步驟重新站起來。</li><li><strong>連回學習規畫：</strong>這證明我的學習規畫不能只列課程，而要包含原型實作、AI 工具使用、展示能力、團隊溝通與反思紀錄。</li></ul></div><p class="careerNote">因此，Progress Report 在這份職涯探索裡不是另一份無關作業，而是第三個證據：我不只聽 mentor 建議，也真的用小作品測試自己能否用 AI、原型與反思紀錄往跨領域方向前進。</p><div class="homeActions"><button class="homeAction" id="startCousin">進入表哥 mentor 訪談</button><button class="homeAction secondary" id="startProfessor">進入教授通識訪談</button></div></section>';
   document.getElementById('startCousin').onclick=()=>{landingMode=false;activeInterview='cousin';current=currentByInterview[activeInterview]||1;render()};
   document.getElementById('startProfessor').onclick=()=>{landingMode=false;activeInterview='professor';current=currentByInterview[activeInterview]||1;renderQuoteFilters();render()};
 }
