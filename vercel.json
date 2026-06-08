@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/html-slides/block-frame-interview-deck/interview-block-frame-deck.html"
+    }
+  ]
+}
